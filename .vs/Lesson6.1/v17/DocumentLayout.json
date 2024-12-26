@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\employeeregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\employeeregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\employeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\employeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|c:\\\u043A\u0443\u0440\u0441 c#\\lesson6.1\\lesson6.1\\employeeregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1CCBF1C-0F16-424A-8D60-29708B422DD8}|Lesson6.1\\Lesson6.1.csproj|solutionrelative:lesson6.1\\employeeregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "EmployeeBase.cs",
               "DocumentMoniker": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\EmployeeBase.cs",
               "RelativeDocumentMoniker": "Lesson6.1\\EmployeeBase.cs",
               "ToolTip": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\EmployeeBase.cs",
               "RelativeToolTip": "Lesson6.1\\EmployeeBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T14:58:01.313Z",
               "IsPinned": true,
@@ -48,13 +48,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Manager.cs",
               "DocumentMoniker": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\Manager.cs",
               "RelativeDocumentMoniker": "Lesson6.1\\Manager.cs",
               "ToolTip": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\Manager.cs",
               "RelativeToolTip": "Lesson6.1\\Manager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T14:58:31.711Z",
               "IsPinned": true,
@@ -62,39 +62,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "EmployeeRegistry.cs",
               "DocumentMoniker": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\EmployeeRegistry.cs",
               "RelativeDocumentMoniker": "Lesson6.1\\EmployeeRegistry.cs",
               "ToolTip": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\EmployeeRegistry.cs",
               "RelativeToolTip": "Lesson6.1\\EmployeeRegistry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T14:58:44.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\Worker.cs",
               "RelativeDocumentMoniker": "Lesson6.1\\Worker.cs",
               "ToolTip": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\Worker.cs",
               "RelativeToolTip": "Lesson6.1\\Worker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T14:58:38.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\Program.cs",
               "RelativeDocumentMoniker": "Lesson6.1\\Program.cs",
               "ToolTip": "C:\\\u041A\u0443\u0440\u0441 C#\\Lesson6.1\\Lesson6.1\\Program.cs",
               "RelativeToolTip": "Lesson6.1\\Program.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAgwJwAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T14:20:49.85Z",
               "EditorCaption": ""

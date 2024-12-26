@@ -1,257 +1,140 @@
-﻿namespace Lesson6._1
+﻿namespace Lesson6._1;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        Console.WriteLine($"Введите количество сотрудников, которых вы желаете добавить");
+        var newPersonsCompany = Console.ReadLine();
+        if (int.TryParse(newPersonsCompany, out int CountNewPersons) && CountNewPersons < 0)
         {
-            Manager ManagerOne = new Manager();
-            Manager ManagerTwo = new Manager();
-            Worker WorkerOne = new Worker();
-            Worker WorkerTwo = new Worker();
-            var ManagerOneProject = new Manager.Project();
-            var ManagerTwoProject = new Manager.Project();
-
-            EmployeeRegistry.AddEmployee(employee: ManagerOne);
-            EmployeeRegistry.AddEmployee(employee: ManagerTwo);
-            EmployeeRegistry.AddEmployee(employee: WorkerOne);
-            EmployeeRegistry.AddEmployee(employee: WorkerTwo);
-
-            Console.WriteLine("\t" + "\t" + "Программа для записи данных о сотрудниках");
-
-            //ЗАПОЛНЯЕМ МЕНЕДЖЕРА - 1
-            Console.WriteLine("Заполните данные 1-го менеджера" + "\n" + "Введи имя менеджера: ");
-            ManagerOne.Name = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerOne.Name))
+            Console.WriteLine("Вы ввели некорректное значение");
+            return;
+        }
+        if (CountNewPersons > 50)
+        {
+            Console.WriteLine("Вы ввели слишком много сотрудников");
+            return;
+        }
+        else
+        {
+            for (int i = 0; i < CountNewPersons; i++)
             {
-                Console.WriteLine("Ошибка! Вы не ввели имя.");
+                CreateInfoPersons();
+                Console.Clear();
+            }
+            Console.WriteLine($"{"\n"}Введите (Y) для просмотра введенной информации по сотрудникам" +
+                                $"{"\n"}Введите (N) для выхода.");
+            var infoConfirmation = Console.ReadLine();
+            if (string.IsNullOrEmpty(infoConfirmation))
+            {
+                Console.WriteLine("Неверный ввод");
                 return;
             }
-            Console.WriteLine("Укажите должность (Manager / Менеджер): ");
-            ManagerOne.Position = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerOne.Position))
+            if (infoConfirmation.Equals("y", StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine("Ошибка! Вы не ввели должность");
-                return;
-            }
-            if (ManagerOne.Position != "Менеджер" && ManagerOne.Position != "Manager")
-            {
-                Console.WriteLine("Ошибка! Вы неверно ввели должность");
-                return;
-            }
-
-            try
-            {
-                Console.WriteLine("Укажи возраст: ");
-                ManagerOne.Age = byte.Parse(Console.ReadLine());
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Ошибка! Вы не ввели возраст");
-                return;
-            }
-
-            Console.WriteLine($"Название проекта над которым работает {ManagerOne.Name}: ");
-            ManagerOneProject.ProjectName = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerOneProject.ProjectName))
-            {
-                Console.WriteLine("Ошибка! Вы ничего не ввели");
-                return;
-            }
-
-            Console.WriteLine("Срок сдачи проекта: " + ManagerOneProject.ProjectName);
-            ManagerOneProject.Deadline = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerOneProject.Deadline))
-            {
-                Console.WriteLine("Ошибка! Вы ничего не ввели");
-                return;
-            }
-
-
-            //ЗАПОЛНЯЕМ МЕНЕДЖЕРА - 2
-            Console.WriteLine("Заполните данные 2-го менеджера" + "\n" + "Введи имя менеджера: ");
-            ManagerTwo.Name = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerTwo.Name))
-            {
-                Console.WriteLine("Ошибка! Вы не ввели имя");
-                return;
-            }
-
-            Console.WriteLine("Укажите должность (Manager / Менеджер): ");
-            ManagerTwo.Position = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerTwo.Position))
-            {
-                Console.WriteLine("Ошибка! Вы не ввели должность");
-                return;
-            }
-            if (ManagerTwo.Position != "Менеджер" && ManagerTwo.Position != "Manager")
-            {
-                Console.WriteLine("Ошибка! Вы неверно ввели должность");
-                return;
-            }
-
-            try
-            {
-                Console.WriteLine("Укажи возраст: ");
-                ManagerTwo.Age = byte.Parse(Console.ReadLine());
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Ошибка! Вы не ввели возраст");
-                return;
-            }
-
-            Console.WriteLine($"Название проекта над которым работает {ManagerTwo.Name}: ");
-            ManagerTwoProject.ProjectName = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerTwoProject.ProjectName))
-            {
-                Console.WriteLine("Ошибка! Вы ничего не ввели");
-                return;
-            }
-
-            Console.WriteLine("Срок сдачи проекта: " + ManagerTwoProject.ProjectName);
-            ManagerTwoProject.Deadline = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(ManagerTwoProject.Deadline))
-            {
-                Console.WriteLine("Ошибка! Вы ничего не ввели");
-                return;
-            }
-
-            //ЗАПОЛНЯЕМ РАБОЧЕГО - 1
-            Console.WriteLine("Заполните данные 1-го работника" + "\n" + "Введи имя работника: ");
-            WorkerOne.Name = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(WorkerOne.Name))
-            {
-                Console.WriteLine("Ошибка! Вы не ввели имя");
-                return;
-            }
-
-            Console.WriteLine("Укажите должность (Рабочий / Worker): ");
-            WorkerOne.Position = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(WorkerOne.Position))
-            {
-                Console.WriteLine("Ошибка! Вы не ввели должность");
-                return;
-            }
-            if (WorkerOne.Position != "Рабочий" && WorkerOne.Position != "Worker")
-            {
-                Console.WriteLine("Ошибка! Вы неверно ввели должность");
-                return;
-            }
-
-            Console.WriteLine("Укажи фамилию работника: ");
-            WorkerOne.Surname = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(WorkerOne.Surname))
-            {
-                Console.WriteLine("Ошибка! Вы ничего не ввели");
-                return;
-            }
-
-            try
-            {
-                Console.WriteLine("Укажи возраст: ");
-                WorkerOne.Age = byte.Parse(Console.ReadLine());
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Ошибка! Вы не ввели возраст");
-                return;
-            }
-
-            //ЗАПОЛНЯЕМ РАБОЧЕГО - 2
-            Console.WriteLine("Заполните данные 2-го работника" + "\n" + "Введи имя работника: ");
-            WorkerTwo.Name = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(WorkerTwo.Name))
-            {
-                Console.WriteLine("Ошибка! Вы не ввели имя");
-                return;
-            }
-
-            Console.WriteLine("Укажите должность (Рабочий / Worker): ");
-            WorkerTwo.Position = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(WorkerTwo.Position))
-            {
-                Console.WriteLine("Ошибка! Вы не ввели должность");
-                return;
-            }
-            if (WorkerTwo.Position != "Рабочий" && WorkerTwo.Position != "Worker")
-            {
-                Console.WriteLine("Ошибка! Вы неверно ввели должность");
-                return;
-            }
-
-            Console.WriteLine("Укажи фамилию работника: ");
-            WorkerTwo.Surname = Convert.ToString(Console.ReadLine());
-            if (string.IsNullOrEmpty(WorkerTwo.Surname))
-            {
-                Console.WriteLine("Ошибка! Вы ничего не ввели");
-                return;
-            }
-
-            try
-            {
-                Console.WriteLine("Укажи возраст: ");
-                WorkerTwo.Age = byte.Parse(Console.ReadLine());
-            
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Ошибка! Вы не ввели возраст");
-                return;
-            }
-
-            try
-            {
-                Console.WriteLine("\n");
-                Console.WriteLine("Введите (Да) для просмотра введенной информации по сотрудникам");
-                Console.WriteLine("Введите (Нет) для выхода");
-                string infoConfirmationOne = Convert.ToString(Console.ReadLine());
-
-                if (infoConfirmationOne == "Да")
+                while (true)
                 {
-                    while (true)
+                    Console.WriteLine($"{"\n"}Нажмите - 1 (для вывода информации о сотрудниках)" +
+                            $"{"\n"}Нажмите - 2 (для поиска сотрудника)" +
+                            $"{"\n"}Нажмите - 3 (для выхода из программы)");
+
+                    var numberCount = Console.ReadLine();
+                    if (!int.TryParse(numberCount, out int count) && count < 0)
                     {
-                        Console.WriteLine($"{"\n"}Нажмите - 1 (для вывода информации о сотрудниках)" +
-                                $"{"\n"}Нажмите - 2 (для поиска сотрудника)" +
-                                $"{"\n"}Нажмите - 3 (для вывода информации по менеджерам)" +
-                                $"{"\n"}Нажмите - 4 (для вывода информации по рабочим)" +
-                                $"{"\n"}Нажмите - 5 (для выхода из программы)");
-                        int numberCount = int.Parse(Console.ReadLine());
-                        switch (numberCount)
+                        Console.WriteLine("Неверный ввод");
+                        return;
+                    }
+                    else
+                    {
+                        switch (count)
                         {
                             case 1:
+                                Console.WriteLine($"{"\n"}Список сотрудников: ");
                                 EmployeeRegistry.ListAllEmployees();
                                 break;
                             case 2:
-                                EmployeeRegistry.FindEmployee("Валера");
+                                Console.WriteLine($"{"\n"}Введите имя сотрудника, которого желаете найти: ");
+                                var SearchName = Console.ReadLine();
+                                if (!string.IsNullOrEmpty(SearchName))
+                                {
+                                    EmployeeRegistry.FindEmployee(SearchName);
+                                }
                                 break;
                             case 3:
-                                ManagerOne.GetDetails();
-                                ManagerOneProject.DisplayProjectInfo();
-                                ManagerTwo.GetDetails();
-                                ManagerTwoProject.DisplayProjectInfo();
-                                break;
-                            case 4:
-                                WorkerOne.GetDetails();
-                                WorkerTwo.GetDetails();
-                                break;
-                            case 5:
-                                return;
+                                Console.WriteLine("Программа завершена");
+                            return;
                         }
                     }
                 }
-                else
+            }
+            else
+            {
+                if (infoConfirmation.Equals("n", StringComparison.CurrentCultureIgnoreCase))
                 {
-                    if (infoConfirmationOne == "Нет")
-                    {
-                        return;
-                    }
+                    Console.WriteLine("Программа завершена");
+                    return;
                 }
             }
-            catch (FormatException)
+        } 
+    }
+
+    public static bool CreateInfoPersons()
+    {
+        Console.WriteLine("Введите имя сотрудника");
+        var inputName = Console.ReadLine();
+        if (string.IsNullOrEmpty(inputName))
+        {
+            Console.WriteLine("Неверный ввод");
+            return false;
+        }
+        Console.WriteLine("Введите фамилию сотрудника");
+        var inputSurName = Console.ReadLine();
+        if (string.IsNullOrEmpty(inputSurName))
+        {
+            Console.WriteLine("Неверный ввод");
+            return false;
+        }
+        Console.WriteLine("Введите возраст сотрудника");
+        var inputAge = Console.ReadLine();
+        if (!byte.TryParse(inputAge, out var age) && age < 0)
+        {
+            Console.WriteLine("Неверный ввод");
+            return false;
+        }
+        Console.WriteLine("Выберите должность сотрудника, которого вы хотите добавить (M / W) ");
+        var inputPosition = Console.ReadLine();
+        if (string.IsNullOrEmpty(inputPosition))
+        {
+            Console.WriteLine("Неверный ввод");
+            return false;
+        }
+        if (inputPosition.Equals("w", StringComparison.CurrentCultureIgnoreCase))
+        {
+            var worker = new Worker(inputName, inputPosition, age, inputSurName);
+            EmployeeRegistry.AddEmployee(worker);
+        }
+        else if (inputPosition.Equals("m", StringComparison.CurrentCultureIgnoreCase))
+        {
+            var manager = new Manager(inputName, inputPosition, age, inputSurName);
+            EmployeeRegistry.AddEmployee(manager);
+
+            Console.WriteLine("Введите название проекта, над которым работает менеджер");
+            var inputProjectName = Console.ReadLine();
+            if (string.IsNullOrEmpty(inputProjectName))
             {
-                Console.WriteLine("Ошибка! Неверный ввод");
-                return;
+                Console.WriteLine("Неверный ввод");
+                return false;
             }
-        }      
+            Console.WriteLine($"Введите дату, сдачи проекта {inputProjectName}");
+            var inputDeadLine = Console.ReadLine();
+            if (string.IsNullOrEmpty(inputDeadLine))
+            {
+                Console.WriteLine("Неверный ввод");
+                return false;
+            }
+            var managerProject = new Manager.Project(inputProjectName, inputDeadLine);
+        }
+        return true;
     }
 }
